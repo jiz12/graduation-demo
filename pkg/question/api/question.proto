@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package question;
+
+option go_package = "../api";
+
+service Question {
+  rpc GetQuestionNum (QuestionNumRequest) returns (QuestionNumResponse) {}
+}
+
+message QuestionNumRequest {
+    int32 questionId = 1;
+}
+
+message QuestionNumResponse {
+    int32 count = 1;
+}
